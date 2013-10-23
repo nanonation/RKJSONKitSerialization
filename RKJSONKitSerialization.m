@@ -20,7 +20,12 @@
 
 #import "RKJSONKitSerialization.h"
 #import "JSONKit.h"
+
+#if TARGET_OS_IPHONE
 #import "RKLog.h"
+#else
+#import <RestKit/RKLog.h>
+#endif
 
 // Set Logging Component
 #undef RKLogComponent

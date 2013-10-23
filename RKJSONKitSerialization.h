@@ -18,7 +18,11 @@
 //  limitations under the License.
 //
 
+#if TARGET_OS_IPHONE
 #import "RKSerialization.h"
+#else
+#import <RestKit/RKSerialization.h>
+#endif
 
 @interface RKJSONKitSerialization : NSObject <RKSerialization>
 @end
